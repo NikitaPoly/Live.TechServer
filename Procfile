@@ -1,1 +1,1 @@
-web: main.exe
+web: go run main.go
