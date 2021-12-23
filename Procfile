@@ -1,1 +1,1 @@
-web: main.exe
+web: Live.TechServer
