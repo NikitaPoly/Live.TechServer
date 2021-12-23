@@ -1,1 +1,1 @@
-web: Live.TechServer
+web: ./bin/Polyakov.tech
