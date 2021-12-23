@@ -75,8 +75,6 @@ func serveHTMLForHomeSite(w http.ResponseWriter, r *http.Request) {
 	} else if r.URL.Path == "/" {
 		r.URL.Path = "/home"
 	}
-	fmt.Println(r.Method)
-	fmt.Println(r.URL.Path)
 	switch r.Method {
 	case "GET":
 		//set path
@@ -87,6 +85,7 @@ func serveHTMLForHomeSite(w http.ResponseWriter, r *http.Request) {
 		htmlTosend, err := ioutil.ReadFile(path)
 		fmt.Println(string(htmlTosend))
 		if err != nil {
+			fmt.Println("error")
 			sendError(w)
 			return
 		}
