@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 	"strings"
 	"time"
 
@@ -114,6 +115,10 @@ func sendIcon(w http.ResponseWriter, r *http.Request) {
 
 //main function for server
 func main() {
+	port, ok := os.LookupEnv("PORT")
+	if !ok {
+		port = "8080"
+	}
 	listOFHomeSite := [10]string{"/home", "/Home", "/resume", "/Resume", "/projects", "/Projects", "/contact", "/Contact", "/Public/", "/"}
 	//register each polyakov.tech html page handler
 	for i := 0; i < len(listOFHomeSite); i++ {
@@ -122,7 +127,7 @@ func main() {
 	//if favorite icon is request use this path
 	http.HandleFunc("/favicon.ico", sendIcon)
 	//run the server
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	if err := http.ListenAndServe(port, nil); err != nil {
 		fmt.Println("cant start")
 	}
 }
