@@ -119,6 +119,8 @@ func main() {
 	fmt.Println(port)
 	if port == "" {
 		port = ":8080"
+	} else {
+		port = ":" + port
 	}
 	fmt.Println(port)
 	listOFHomeSite := [10]string{"/home", "/Home", "/resume", "/Resume", "/projects", "/Projects", "/contact", "/Contact", "/Public/", "/"}
