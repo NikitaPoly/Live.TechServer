@@ -1,1 +1,1 @@
-web: /bin.Live.TechServer
+web: /bin/Live.TechServer
