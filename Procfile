@@ -1,1 +1,1 @@
-web: polyakov-dot-tech
+web: main.exe
