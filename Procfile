@@ -1,1 +1,1 @@
-web: Live.TechServer
+web: polyakov-dot-tech
