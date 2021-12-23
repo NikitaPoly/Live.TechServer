@@ -122,7 +122,7 @@ func main() {
 	//if favorite icon is request use this path
 	http.HandleFunc("/favicon.ico", sendIcon)
 	//run the server
-	if err := http.ListenAndServe(":8081", nil); err != nil {
+	if err := http.ListenAndServe(":8080", nil); err != nil {
 		fmt.Println("cant start")
 	}
 }
