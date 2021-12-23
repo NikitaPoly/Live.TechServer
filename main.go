@@ -76,6 +76,7 @@ func serveHTMLForHomeSite(w http.ResponseWriter, r *http.Request) {
 		r.URL.Path = "/home"
 	}
 	fmt.Println(r.Method)
+	fmt.Println(r.URL.Path)
 	switch r.Method {
 	case "GET":
 		//set path
