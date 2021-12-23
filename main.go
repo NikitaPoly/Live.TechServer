@@ -116,9 +116,11 @@ func sendIcon(w http.ResponseWriter, r *http.Request) {
 //main function for server
 func main() {
 	port := os.Getenv("PORT")
+	fmt.Println(port)
 	if port == "" {
 		port = ":8080"
 	}
+	fmt.Println(port)
 	listOFHomeSite := [10]string{"/home", "/Home", "/resume", "/Resume", "/projects", "/Projects", "/contact", "/Contact", "/Public/", "/"}
 	//register each polyakov.tech html page handler
 	for i := 0; i < len(listOFHomeSite); i++ {
