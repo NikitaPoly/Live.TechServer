@@ -78,11 +78,12 @@ func serveHTMLForHomeSite(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
 		//set path
-		path := "../Public/HTML" + r.URL.Path + ".html"
+		path := "./Public/HTML" + r.URL.Path + ".html"
 		fmt.Println(path)
-		path = strings.ToLower(path)
+		//path = strings.ToLower(path)
 		//Reaf file check for erro and then send correspinding html
 		htmlTosend, err := ioutil.ReadFile(path)
+		fmt.Println(path)
 		fmt.Println(string(htmlTosend))
 		if err != nil {
 			fmt.Println("error")
