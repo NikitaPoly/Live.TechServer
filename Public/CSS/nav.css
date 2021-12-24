@@ -73,3 +73,15 @@ nav ul li a:hover{
         padding: 0;
     }
 }
+/*style tweak for laptops*/
+@media only screen and (max-width: 1400px) and (min-width: 1001px){
+    nav ul li a{
+        font-size: 3.5vw;
+    }
+    nav img#logoNav{
+        max-width: .1vw;
+    }
+    nav ul li a{
+        padding: 0;
+    }
+}
