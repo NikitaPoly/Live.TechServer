@@ -55,6 +55,7 @@ func sendPublicResources(w http.ResponseWriter, r *http.Request) {
 	mimeconverter[".jpg"] = "image/jpeg"
 	mimeconverter[".svg"] = "image/svg+xml"
 	mimeconverter[".js"] = "text/javascript"
+	mimeconverter[".pdf"] = "application/pdf"
 	extension := "." + strings.Split(r.URL.Path, ".")[1]
 	resourceToSend, err := ioutil.ReadFile("./" + r.URL.Path)
 	if err != nil {
